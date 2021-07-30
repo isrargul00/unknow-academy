@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<div class="thank_sec1" style="margin-top: 100px !important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="thnk_box">
+						<h2>Thank You For Signing Up!</h2>
+						<p>Thank you for contacting us at Unknown Academic Help Consultants. One of our experts will
+							get in touch with you shortly. Should you have any questions or queries, please feel free to
+							contact our experts at info@Unknownacademichelp.com or Call us at +92 330 343 1128</p>
+						<h4>Regards</h4>
+						<h6>Team Unknown Academic Help</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- pop up -->
+{% endblock %}
+{% block script %} 
+<script>
+	window.setTimeout(function(){
+		window.location.href="/";
+	},6000);
+</script>
+{% endblock %}

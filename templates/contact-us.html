@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<div class="inner_page_banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h1>contact us</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="inerpage_section1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<div class="conatc_us_form">
+						<form method="post" action="/contact-us">
+							<div class="form-group">
+								<label>Your name *</label>
+								<input type="text" class="form-control" required="required" name="contact_name">
+							</div>
+							<div class="form-group">
+								<label>Your email address *</label>
+								<input type="email" class="form-control" required="required" name="contact_email">
+							</div>
+							<div class="form-group">
+								<label>Phone Number *</label>
+								<input class="form-control" type="number" required="required" name="contact_number">
+							</div>
+							<div class="form-group">
+								<label>Message *</label>
+								<textarea class="form-control" rows="3" name="contact_msg"></textarea>
+							</div>
+							<!-- <div class="form-group">
+								<div class="capbox">
+									<div id="CaptchaDiv"></div>
+									<div class="capbox-inner">
+										Type the above number:
+										<input type="hidden" id="txtCaptcha">
+										<input type="text" name="CaptchaInput" id="CaptchaInput" size="15">
+									</div>
+								</div>
+							</div> -->
+							<button type="submit" class="cont_but" name="contact_sbmit_btn">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+			</div>
+		</div>
+	</div>
+
+{%endblock %}
+{% block script %} 
+<script>
+	{% if response %}
+		swal("{{response}}");
+	{% endif %}
+</script>
+{% endblock %}
